@@ -15,7 +15,7 @@ We supply a Makefile to make it easier to use this setup. UNIX based systems sho
 
 ## Setup
 
-First, make sure you have forked the MODX Revolution repository as described in the [rtfm pages](rhttps://docs.modx.com/revolution/2.x/getting-started/installation/git-installation#GitInstallation-GitLocation). You only need to follow the steps under "Installation Process" before the section named "Run the Build".
+First, make sure you have forked the MODX Revolution repository as described in the [rtfm pages](https://docs.modx.com/revolution/2.x/getting-started/installation/git-installation#GitInstallation-GitLocation). You only need to follow the steps under "Installation Process" before the section named "Run the Build".
  
 Now that you have your up-to-date fork, clone it in **THIS** directory into `revolution`. Example command:
  
@@ -25,7 +25,7 @@ git clone git@github.com:[your-username]/revolution.git
 
 With the files in place, we can now spin up the Docker containers. A Makefile is provided to automate some of the process.
 
-To build and start everything, simply type:
+To build and start everything:
 
 ```
 make
@@ -37,7 +37,7 @@ To stop the machine type:
 make stop
 ```
 
-We also provide a command to [build the transport file](https://docs.modx.com/revolution/2.x/getting-started/installation/git-installation#GitInstallation-RuntheBuild). This is necessary to run the MODX setup. This command also copies the `ht.access` file into `ht.access`. Note that this command takes some time to finish. To run it, simply type:
+We also provide a command to [build the transport file](https://docs.modx.com/revolution/2.x/getting-started/installation/git-installation#GitInstallation-RuntheBuild). This is necessary to run the MODX setup. This command also copies the `ht.access` as `.htaccess`. Note that this command takes some time to finish. To run it type:
 
 ```
 make prepare
@@ -47,7 +47,7 @@ make prepare
 
 ## Access
 
-The website is not accessible at `http://localhost:8000` on UNIX based systems. On Windows machine you need to find the [Docker machine IP](https://docs.docker.com/machine/reference/ip/).
+The website is not accessible at [`http://localhost:8000`](http://localhost:8000) on UNIX based systems. On Windows machine you need to find the [Docker machine IP](https://docs.docker.com/machine/reference/ip/).
 
 You can also access the database on port 3306. On UNIX based systems this is through localhost, but Windows machine also require the Docker machine IP for this.
 
