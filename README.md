@@ -47,9 +47,9 @@ make prepare
 
 ## Access
 
-The website is not accessible at [`http://localhost:8000`](http://localhost:8000) on UNIX based systems. On Windows machine you need to find the [Docker machine IP](https://docs.docker.com/machine/reference/ip/).
+The website is not accessible at [`http://localhost:8000`](http://localhost:8000) on UNIX based systems. On Windows machines you need to find the [Docker machine IP](https://docs.docker.com/machine/reference/ip/).
 
-You can also access the database on port 3306. On UNIX based systems this is through localhost, but Windows machine also require the Docker machine IP for this.
+You can also access the database on port 3306. On UNIX based systems this is through localhost, but Windows machines also require the Docker machine IP for this.
 
 ## Contribute
 
