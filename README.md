@@ -1,8 +1,8 @@
-# MODX Development Docker
+# MODX Revolution Development Docker
 
-Docker setup that makes it easier to develop MODX from GitHub.
+Docker setup that makes it easier to develop MODX Revolution from GitHub. 
 
-Simply clone [MODX Revolution](https://github.com/modxcms/revolution) into this folder and run Docker compose and you are all set. Setup described below.
+Cloning MODX Revolution from GitHub and doing all the necessary setup can be a tedious process. Not to mention configuring PHP, Apache/nginx and MySQL/MSSQL correctly. This Docker setup does all of this work for you with a few simple commands. It creates a Apache (2.4.10) web server running PHP (7.1.2), as well as a MySQL database (5.7.17). The web server mounts your MODX Revolution files and exposes them to you via localhost. 
 
 ## Requirements
 
