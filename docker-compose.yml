@@ -48,7 +48,6 @@ services:
     ports:
       - "8000:80"
     environment:
-      - docker=1
       - MYSQL_USER=revolution
       - MYSQL_PASSWORD=revolution
       - MYSQL_DATABASE=revolution
