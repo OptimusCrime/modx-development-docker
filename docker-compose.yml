@@ -1,0 +1,59 @@
+version: '2'
+
+services:
+
+  ###############################################
+  #                    Files                    #
+  ###############################################
+
+  appdata:
+    image: "alpine:3.5"
+    command: tail -f /dev/null
+    user: "1000"
+    network_mode: "none"
+    volumes:
+      - ./revolution:/var/www/html
+
+
+  ###############################################
+  #                   Database                  #
+  ###############################################
+
+  db:
+    restart: always
+    image: "mysql:5.7.17"
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=revolution
+      - MYSQL_PASSWORD=revolution
+      - MYSQL_DATABASE=revolution
+    volumes:
+      - /var/lib/mysql
+
+
+  ###############################################
+  #                  Webserver                  #
+  ###############################################
+
+  server:
+    restart: always
+    depends_on:
+      - db
+      - appdata
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    environment:
+      - docker=1
+      - COMPOSER_ALLOW_SUPERUSER=1
+      - MYSQL_USER=revolution
+      - MYSQL_PASSWORD=revolution
+      - MYSQL_DATABASE=revolution
+    links:
+      - db
+    volumes_from:
+      - appdata
