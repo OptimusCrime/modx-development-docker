@@ -37,7 +37,7 @@ To stop the machine type:
 make stop
 ```
 
-We also provide a command to [build the transport file](https://docs.modx.com/revolution/2.x/getting-started/installation/git-installation#GitInstallation-RuntheBuild). This is necessary to do before you can run the MODX setup. You only need to run this if you do not have the `core.transport.zip` file in your package directory. This command also copies `ht.access` to `.htaccess`. Note that this command takes some time to finish. Run it with:
+We also provide a command for [building the transport file](https://docs.modx.com/revolution/2.x/getting-started/installation/git-installation#GitInstallation-RuntheBuild). This is necessary to do before you can run the MODX setup if you do not already have the `core.transport.zip` file in your package directory. This command also copies `ht.access` to `.htaccess`. Note that this command takes some time to finish. Run it with:
 
 ```
 make prepare
