@@ -30,6 +30,7 @@ services:
       - MYSQL_PASSWORD=revolution
       - MYSQL_DATABASE=revolution
     volumes:
+      - ./docker/mysql:/etc/mysql/conf.d
       - /var/lib/mysql
 
 
